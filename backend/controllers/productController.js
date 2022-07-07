@@ -13,7 +13,7 @@ export const addProductController = async (req,res) =>{
     try{
         const newProducts = new Product(req.body)
         await newProducts.save();
-        res.status(200).send("Products created Successfully!")
+        res.status(200).send("Products Created Successfully!")
     }catch(error){
         console.log(error)
     }
