@@ -1,32 +1,32 @@
 import mongoose from "mongoose";
 
 // for create table into db
-const productSchema = mongoose.Schema(
+const productSchema = new mongoose.Schema(
   {
     name: {
       type: String,
-      required: true,
+      required: true
     },
     category: {
       type: String,
-      required: true,
+      required: true
     },
     price: {
       type: Number,
-      required: true,
+      required: true
     },
     image: {
       type: String,
-      required: true,
-    },
+      required: true
+    }
   },
   {
     //for date
-    timestaps: true,
+    timestaps: true
   }
 );
 
 const Product = mongoose.model("Product", productSchema);
-module.exports = Product;
+export default Product;
 
  
