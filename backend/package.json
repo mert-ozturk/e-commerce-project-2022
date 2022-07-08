@@ -6,6 +6,8 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \" npm run server \"\"npm run frontend\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Mert Ozturk",
@@ -14,6 +16,7 @@
     "body-parser": "^1.20.0",
     "color": "^4.2.3",
     "colors": "^1.4.0",
+    "concurrently": "^7.2.2",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
